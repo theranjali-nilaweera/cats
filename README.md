@@ -17,13 +17,24 @@ http://localhost:3333/api/cats/best
 ## Future enhancements
 - Scalable to add new sub projects eg: UI component
 - Dockerize the each project separately or as a whole based on need
-- Add more unit tests
-- Add some flexibilty to the API
+- Add more tests
+- Add some flexibilty to the API 
 - Add an api documentation
 
 ## Development server
 
 Run `nx serve best-cats` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+## Tests
+Test all
+![picture alt](https://github.com/theranjali-nilaweera/cats/blob/main/test-result.png "all tests")
+
+
+## API response
+Best cats endpoint response
+![picture alt](https://github.com/theranjali-nilaweera/cats/blob/main/api-response.png "all tests")
+
+
 
 ## Understand this workspace
 
