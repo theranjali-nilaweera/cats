@@ -1,25 +1,25 @@
 import {createLog} from './../logs/logging';
-import {getFriendlyCats} from './catService';
+import {getCats} from './catService';
+import { getRemoteCats } from './remote/remoteCatService';
 import {allCats,friendlyCats} from './cats.mock';
-import Cat from './Cat';
 const log = createLog(__filename);
+jest.mock('./remote/remoteCatService');
 
 describe('catService.spec', () => {
     let remoteCatServiceMock;
 
     it('WHEN all cats are given SHOULD find top friendly cats', async () => {
         // arrange
-        const remoteCats = [...allCats];
-        const sortedFriendlyCats = [...friendlyCats];
-        let result = new Array<any>();
+        (getRemoteCats as jest.Mock).mockResolvedValue(allCats);
+
         // act
-        result = getFriendlyCats(remoteCats);
+        const result = await getCats();
 
         // assert
         expect(result.length).toBe(3);
         expect(result[0]).toBeDefined;
-        expect(result[0].breed).toBe(sortedFriendlyCats[0].breed);
-        expect(result[1].breed).toBe(sortedFriendlyCats[1].breed);
-        expect(result[2].breed).toBe(sortedFriendlyCats[2].breed);
+        expect(result[0]).toBe(friendlyCats[0].breed);
+        expect(result[1]).toBe(friendlyCats[1].breed);
+        expect(result[2]).toBe(friendlyCats[2].breed);
     });
 });

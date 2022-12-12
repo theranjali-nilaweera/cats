@@ -32,7 +32,7 @@ Test all
 
 ## API response
 Best cats endpoint response
-![picture alt](https://github.com/theranjali-nilaweera/cats/blob/main/api-response.png "all tests")
+![picture alt](https://github.com/theranjali-nilaweera/cats/blob/main/api-response.png "response")
 
 
 

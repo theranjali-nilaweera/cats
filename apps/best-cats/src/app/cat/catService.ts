@@ -10,7 +10,7 @@ export const getCats = async (): Promise<any> => {
     return topCats.map((cat : Cat) => cat.breed);
 };
 
-export const getFriendlyCats = (unfilteredCats: any = []): [] => {
+const getFriendlyCats = (unfilteredCats: any = []): [] => {
     const sortedFriendlyCats = (unfilteredCats || []).map(originalCat => {
         const cat = new Cat(
             originalCat.id,

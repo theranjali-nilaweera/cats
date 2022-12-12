@@ -21,6 +21,6 @@ app.use('/api/cats', routes);
 
 const port = process.env.port || 3333;
 const server = app.listen(port, () => {
-  log.info(`Listening at http://localhost:${port}/api`);
+  log.info(`Listening at http://localhost:${port}/api/cats/best`);
 });
 server.on('error', console.error);
