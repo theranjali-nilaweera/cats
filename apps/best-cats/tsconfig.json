@@ -9,5 +9,11 @@
     {
       "path": "./tsconfig.spec.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "target": "es6",
+    "outDir": "out",
+    "resolveJsonModule": true,
+    "sourceMap": true
+  }
 }
